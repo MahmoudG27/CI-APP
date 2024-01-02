@@ -25,7 +25,7 @@ pipeline {
 	stage('Trigger CD Job') {
             steps {
                 script {
-                    def triggeredBuild = build job: 'CD', parameters: [string(name: 'BUILD_NUMBER', value: env.BUILD_NUMBER)]
+		      build job: 'CD', parameters: [string(name: 'BUILD_NUMBER', value: env.BUILD_NUMBER)]
                 }
             }
         }
