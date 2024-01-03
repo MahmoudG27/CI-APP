@@ -10,7 +10,7 @@ pipeline {
 	stage('Build Docker Image') {
             steps {
                 echo 'Build'
-                withCredentials([usernamePassword(credentialsId: 'Nexus-cred', usernameVariable: 'USERNAME_MG', passwordVariable: 'PASSWORD_MG')]) {
+                withCredentials([usernamePassword(credentialsId: 'docker-cred', usernameVariable: 'USERNAME_MG', passwordVariable: 'PASSWORD_MG')]) {
                     sh '''
 			docker login -u ${USERNAME_MG} -p ${PASSWORD_MG}
 			docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER} .
