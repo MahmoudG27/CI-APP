@@ -14,8 +14,6 @@ pipeline {
                     sh '''
 			docker login http://15.206.81.210:9001/repository/bake-house/ -u ${USERNAME_MG} -p ${PASSWORD_MG}
                         docker build -t bake:v${BUILD_NUMBER} .
-			#docker login -u ${USERNAME_MG} -p ${PASSWORD_MG}
-                        #docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -24,7 +22,6 @@ pipeline {
         stage('Push Docker Image') {
             steps {  
                 echo 'Push'
-                  #sh 'docker push ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}'
 		   sh 'docker push 15.206.81.210:9001/repository/bake-house/'
             }
         }
