@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_IMAGE_NAME = "elnabatshy/bake"
+    }
+
     stages {
         
 	stage('Build Docker Image') {
@@ -9,7 +13,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'docker-cred', usernameVariable: 'USERNAME_MG', passwordVariable: 'PASSWORD_MG')]) {
                     sh '''
                         docker login -u ${USERNAME_MG} -p ${PASSWORD_MG}
-                        docker build -t elnabatshy/bake:v${BUILD_NUMBER} .
+                        docker build -t ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -18,18 +22,14 @@ pipeline {
         stage('Push Docker Image') {
             steps {  
                 echo 'Push'
-                   sh 'docker push elnabatshy/bake:v${BUILD_NUMBER}'
+                   sh 'docker push ${DOCKER_IMAGE_NAME}:v${BUILD_NUMBER}'
             }
         }
-	
-	stage('Trigger CD Job') {
+
+	stage('Trigger CD job ') {
             steps {
-                script {
-		      build job: 'CD',
-		      parameters: [
-			  [ $class: 'StringParameterValue', name: 'FROM_BUILD', value: "${BUILD_NUMBER}" ]
-		      ]
-                }
+                echo "triggering CD"
+                build job: 'CD', parameters: [string(name: 'FROM_BUILD', value: env.BUILD_NUMBER)]
             }
         }
     }
