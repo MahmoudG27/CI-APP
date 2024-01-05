@@ -38,6 +38,8 @@ $ google-chrome https://mahmoudg.github.io/Delivery-pizza/index.html
 
 ***
 
-### Contributors:
-* Ahmed Soliman Ahmed https://github.com/solman500
-* Mahmoud Gamal https://github.com/MahmoudG27
+## Contributors:
+* Developer
+|[Ahmed Soliman](https://github.com/solman500)|
+* DevOps Engineer
+|[Mahmoud Gamal](https://github.com/MahmoudG27)|
