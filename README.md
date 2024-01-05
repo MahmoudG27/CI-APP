@@ -37,9 +37,11 @@ $ google-chrome https://659461f4e1f7890404f1d19a--remarkable-speculoos-0bbbf3.ne
 ***
 
 ### Used Technologies:
-* HTML5
-* CSS
 * JavaScript
+* react
+* nodejs
+* bootstrap
+* firebase
 
 ***
 
