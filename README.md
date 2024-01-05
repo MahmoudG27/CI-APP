@@ -10,25 +10,31 @@
 * You can create Argo Application by manifest file (Application.yaml) or Create it manully from Argo Dashboard.
 * The Source of application in Argo is CD repository in GitHub and the destination is Kubernetes Cluster.
 # Notes:
-* If your Jenkins machine doesn't has Public IP and you need make WebHook. You can use Ngrok to make Public URL for Jenkins or any App
+* If your Jenkins machine doesn't has Public IP and you need make Github Webhook to make Pipeline run automatically If any change occurs . You can use |[Ngrok](https://ngrok.com/download)| to make Public URL for Jenkins or any App.
 
 ***
 
-# CI/CD Project image:
+## CI/CD Project image:
 ![CI/CD](CI-CD.jpeg)
 
 ***
 
-# Delivery Pizza Website
+## Delivery Pizza Website
 
+* Tasty treat website  for delivery foods
 
+***
 
-### How To Run Website Locally:
-
-In your browser type the website url, or open the terminal and type: 
+### URL of Website:
 ``` sh
-$ google-chrome https://mahmoudg.github.io/Delivery-pizza/index.html
+* https://659461f4e1f7890404f1d19a--remarkable-speculoos-0bbbf3.netlify.app/home
+
+or On terminal: 
+
+$ google-chrome https://659461f4e1f7890404f1d19a--remarkable-speculoos-0bbbf3.netlify.app/home
 ```
+
+***
 
 ### Used Technologies:
 * HTML5
