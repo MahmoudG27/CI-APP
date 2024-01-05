@@ -10,7 +10,7 @@
 * You can create Argo Application by manifest file (Application.yaml) or Create it manully from Argo Dashboard.
 * The Source of application in Argo is CD repository in GitHub and the destination is Kubernetes Cluster.
 # Notes:
-* If your Jenkins machine doesn't Public connection. You can use Ngrok to make Public URL for Jenkins or any App
+* If your Jenkins machine doesn't Public IP and you need make WebHook. You can use Ngrok to make Public URL for Jenkins or any App
 
 ***
 
@@ -39,3 +39,5 @@ $ google-chrome https://mahmoudg.github.io/Delivery-pizza/index.html
 ***
 
 ### Contributors:
+* Ahmed Soliman Ahmed https://github.com/solman500
+* Mahmoud Gamal https://github.com/MahmoudG27
