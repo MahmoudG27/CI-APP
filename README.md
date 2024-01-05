@@ -10,13 +10,12 @@
 * You can create Argo Application by manifest file (Application.yaml) or Create it manully from Argo Dashboard.
 * The Source of application in Argo is CD repository in GitHub and the destination is Kubernetes Cluster.
 # Notes:
-* If your Jenkins machine doesn't Public IP and you need make WebHook. You can use Ngrok to make Public URL for Jenkins or any App
+* If your Jenkins machine doesn't has Public IP and you need make WebHook. You can use Ngrok to make Public URL for Jenkins or any App
 
 ***
 
 # CI/CD Project image:
-
-![CI-CD](https://github.com/MahmoudG27/CI-APP/assets/133862420/01cecac8-8396-4424-a404-70a5d74b9b55)
+![CI/CD](CI-CD.jpeg)
 
 ***
 
